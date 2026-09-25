@@ -1,0 +1,24 @@
+# OS junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Packaged builds (chrome://extensions -> Pack extension produces these)
+*.zip
+*.crx
+*.pem
+
+# Secrets — relevant if a keyed data provider (e.g. Twelve Data) is added later
+.env
+.env.*
+*.key
+secrets.json
+
+# Node, if tooling is ever added
+node_modules/
+npm-debug.log*

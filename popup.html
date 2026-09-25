@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exchange Rates</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main id="app">
+    <!-- Cards are cloned into the container by popup.js from the template below -->
+    <div id="cards"></div>
+
+    <template id="card-template">
+      <section class="card">
+        <div class="card-head">
+          <span class="pair-name"></span>
+          <span class="change-chip"></span>
+        </div>
+        <div class="rate">--</div>
+        <div class="card-foot">
+          <span class="pair-quotes">Prev close: --</span>
+        </div>
+      </section>
+    </template>
+
+    <footer id="status">
+      <span id="updated">Loading…</span>
+      <button id="refresh" title="Refresh now">&#8635;</button>
+    </footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f5f6f8;
+  --card-bg: #ffffff;
+  --text: #1a1d21;
+  --text-dim: #6b7280;
+  --border: #e3e5e8;
+  --up: #16a34a;
+  --up-bg: #e7f6ec;
+  --down: #dc2626;
+  --down-bg: #fdeaea;
+  --flat: #6b7280;
+  --flat-bg: #eceef1;
+  --err: #b45309;
+  --err-bg: #fdf3e3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #202124;
+    --card-bg: #2d2f33;
+    --text: #e8eaed;
+    --text-dim: #9aa0a6;
+    --border: #3c4043;
+    --up: #4ade80;
+    --up-bg: #1d3a2a;
+    --down: #f87171;
+    --down-bg: #3d2222;
+    --flat: #9aa0a6;
+    --flat-bg: #383b3f;
+    --err: #fbbf24;
+    --err-bg: #3d3022;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+#app {
+  padding: 12px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pair-name {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: var(--text-dim);
+}
+
+.change-chip {
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 3px 9px;
+}
+
+.change-chip.up {
+  color: var(--up);
+  background: var(--up-bg);
+}
+
+.change-chip.down {
+  color: var(--down);
+  background: var(--down-bg);
+}
+
+.change-chip.flat {
+  color: var(--flat);
+  background: var(--flat-bg);
+}
+
+.rate {
+  font-size: 28px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  margin: 6px 0 4px;
+}
+
+.card-foot {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.card.error {
+  border-color: var(--err);
+  background: var(--err-bg);
+}
+
+.card.error .rate {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--err);
+  cursor: pointer;
+}
+
+#status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 4px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+#refresh {
+  border: none;
+  background: none;
+  color: var(--text-dim);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+#refresh:hover {
+  background: var(--flat-bg);
+}
+
+#refresh.spinning {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
