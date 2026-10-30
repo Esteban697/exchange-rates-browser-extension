@@ -22,3 +22,10 @@ secrets.json
 # Node, if tooling is ever added
 node_modules/
 npm-debug.log*
+
+# Secrets — never commit
+*.pem
+*.key
+*.p12
+*.pfx
+service-account*.json
